@@ -1,0 +1,211 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+}
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+/* -------------------------------------- */
+/* -----------REUSEABLE COMPONENT-------- */
+/* -------------------------------------- */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.row {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* -------------------------------------- */
+/* ------------------HEADER-------------- */
+/* -------------------------------------- */
+.header-sticky {
+    position: relative;
+    background-color: #19213A;
+}
+.header-logo {
+    display: inline-block;
+}
+.header-logo img{
+    width: 70%;
+    height: 80px;
+}
+.header-menu {
+    display: inline-block;
+    position: relative;
+}
+.header-menu .nav-content li {
+    list-style: none;
+    margin-left: 30%;
+}
+.header-menu .nav-content li a {
+    text-decoration: none;
+    color: white;
+    float: left;
+    margin-left: 5%;
+    padding: 3% 3% 0 0;
+    margin-bottom: 4%;
+    font-weight: 600;
+}
+.header-menu .nav-content li a:hover,
+.header-menu .nav-content li a:active {
+    text-decoration: underline;
+    transition: all .5s;
+    transform: translateY(-5px);
+}
+
+.header-signin {
+    display: inline-block;
+    position: absolute;
+}
+.header-signin .header-signin-btn {
+    width: 130px;
+    height: 40px;
+    color: #19213A;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid #19213A;
+    margin-left: 125%;
+    margin-top: 12%;
+}
+.header-signin .header-signin-btn:hover,
+.header-signin .header-signin-btn:active {
+    background-color: #19213A;
+    cursor: pointer;
+    color: white;
+    border: 2px solid white;
+    
+}
+  
+.header-signin .header-search {
+    position: absolute;
+    width: 110%;
+    height: 40px;
+    margin-top: 12%;
+    border-radius: 30px;
+    border: 1px solid #19213A;
+    overflow: hidden;
+    font-size: 20px;
+}
+.header-signin .icon-search {
+    position: absolute;
+    margin-top: 17%;
+    margin-left: 95%;
+    cursor: pointer;
+}
+input[type=text] {
+    border: 1px solid #eeeeee;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 100%;
+    outline: 0;
+}
+input[type=text]::placeholder {
+    font-size: 13px;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+/* ------------------------------------------ */
+/* ---------------------SLIDER--------------- */
+.slider-img {
+    display: inline-block;
+}
+.slider-content{
+    position: absolute;
+    display: inline-block;
+    text-align: left;
+    top: 30%;
+    left: 50%;
+}
+.slider-content h1 {
+    color: #1f2022;
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: capitalize;
+    margin-bottom: 13px;
+    animation-name: slider-h1;
+    animation-duration: 4s;
+    position: absolute;
+    margin-top: 5%;
+    animation: slider-span 1s 0s forwards;
+    opacity: 0;
+    animation-delay: 1.5s;
+}
+@keyframes slider-h1 {
+    from {left: 30%;opacity:1;-webkit-transform:translate3d(80%,0,0);transform:translate3d(80%,0,0);visibility: visible;}
+    to {left: 0%;opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0);visibility: visible;}
+}
+
+.slider-content span {
+    animation-name: slider-span;
+    position: absolute;
+    color: #5151f3;
+    margin-bottom: 50px;
+    animation: slider-span 2s 0s forwards;/*ten animation - thoi gian duration - thoi gian hien thi tag - forwards*/
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+@keyframes slider-span {
+    from {left: 30%;opacity:0;-webkit-transform:translate3d(80%,0,0);transform:translate3d(80%,0,0);visibility: visible;}
+    to {left: 0%;opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0);visibility: visible;}
+}
+
+.slider-content p {
+    animation-name: slider-p;
+    animation-duration: 4s;
+    position: absolute;
+    opacity: 1;
+    color: rgb(90, 86, 86);
+    margin-top: 32%;
+}
+
+@keyframes slider-p {
+    from {left: 30%;opacity:0;-webkit-transform:translate3d(80%,0,0);transform:translate3d(80%,0,0);visibility: visible;}
+    to {left: 0%;opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0);visibility: visible;}
+}
+
+.slider-content a {
+    animation-name: slider-a;
+    text-decoration: none;
+    font-size: 110%;
+    font-weight: 400;
+    text-transform: capitalize;
+    background-color: #2577fd;
+    animation-duration: 2s;
+    position: absolute;
+    color: white;
+    transition:opacity;
+    padding: 1.5% 3%;
+    margin-top: 40%;
+    border-radius: 50px;
+}
+
+@keyframes slider-a {
+    from {left: 30%;opacity:0;-webkit-transform:translate3d(80%,0,0);transform:translate3d(80%,0,0);visibility: visible;}
+    to {left: 0%;opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0);visibility: visible;}
+}
+
+.slider-content a:hover,
+.slider-content a:active{
+    background: #00b1ff;
+    cursor: pointer;
+}
